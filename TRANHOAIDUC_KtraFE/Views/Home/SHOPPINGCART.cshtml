@@ -1,0 +1,459 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
+
+
+
+<style type="text/css">
+    html {
+        font-size: 12px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    }
+
+    body {
+        background-color: dimgrey;
+    }
+
+    .logo {
+        background-color: white;
+    }
+
+        .logo img {
+            background-color: white;
+            height: 50px;
+        }
+
+    #sđt {
+        float: right;
+    }
+
+    .pay {
+        border: solid;
+        width: 70%;
+        background-color: white;
+    }
+
+        .pay img {
+            height: 25px;
+        }
+
+    .product-list {
+        text-align: left;
+    }
+
+        .product-list h6 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: aqua;
+        }
+
+    .list-container {
+        border: solid;
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .benphai {
+        border: solid;
+        padding: 50px;
+        width: 30%;
+        float: right;
+        background-color: white;
+    }
+
+    .htgh {
+        width: 70%;
+    }
+
+    .p-2 border rounded {
+        justify-content: right;
+        border: solid;
+    }
+</style>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <div class="logo">
+        <img src="~/Content/images/thanhtoan.png" alt="logo" />
+        <img float="right" id="sđt" src="~/Content/images/sđt.png" />
+    </div>
+</head>
+<body>
+
+    <!--Bên phải-->
+    <div class="benphai">
+        <!-- Giao tới -->
+        <div class="mb-4">
+            <h2 class="text">
+                Giao tới
+            </h2>
+            <div class="mt-2 text-sm text-gray-600">
+                <div class="flex items-center justify-between">
+                    <span>
+                        Quoc Tran Bao
+                    </span>
+                    <a class="text-blue-600" href="#">
+                        Thay đổi
+                    </a>
+                </div>
+                <div>
+                    0328370905
+                </div>
+                <div>
+                    52 Trần Hưng Đạo, Phường 04, Quận 5, HCM
+                </div>
+            </div>
+        </div>
+        <!-- Tiki Khuyến Mãi -->
+        <div class="mb-4">
+            <h2 class="text-lg font-bold text-gray-700">
+                Tiki Khuyến Mãi
+            </h2>
+            <div class="mt-2 flex items-center space-x-2">
+                <img alt="ZaloPay logo" class="h-6" height="30" src="https://storage.googleapis.com/a1aa/image/lE91EEeD5lxaCiGYPheclHNviGWRdqBxEQh587DKBzSfF0InA.jpg" width="30" />
+                <span class="text-sm text-gray-700">
+                    Giảm 50K
+                </span>
+                <button class="px-2 py-1 bg-blue-600 text-white rounded">
+                    Áp Dụng
+                </button>
+            </div>
+            <div class="mt-2 text-sm text-blue-600">
+                <a href="#">
+                    Chọn hoặc nhập Khuyến mãi khác
+                </a>
+            </div>
+        </div>
+        <!-- Thông tin đơn hàng -->
+        <div class="mb-4">
+            <h2 class="text-lg font-bold text-gray-700">
+                Thông tin đơn hàng
+            </h2>
+            <div class="mt-2 text-sm text-gray-600">
+                <div class="flex items-center justify-between">
+                    <span>
+                        1 sản phẩm
+                    </span>
+                    <a class="text-blue-600" href="#">
+                        Xem thông tin
+                    </a>
+                </div>
+                <div class="mt-2 flex items-center justify-between">
+                    <span>
+                        Tạm tính
+                    </span>
+                    <span>
+                        8.480.000 ₫
+                    </span>
+                </div>
+                <div class="mt-2 flex items-center justify-between">
+                    <span>
+                        Phí vận chuyển
+                    </span>
+                    <span>
+                        42.000 ₫
+                    </span>
+                </div>
+                <div class="mt-2 flex items-center justify-between">
+                    <span>
+                        Khuyến mãi vận chuyển
+                    </span>
+                    <span>
+                        -30.000 ₫
+                    </span>
+                </div>
+                <div class="mt-2 flex items-center justify-between font-bold text-red-600">
+                    <span>
+                        Tổng tiền
+                    </span>
+                    <span>
+                        8.492.000 ₫
+                    </span>
+                </div>
+                <div class="mt-2 text-sm text-green-600">
+                    FREESHIP đã được áp dụng!
+                </div>
+            </div>
+        </div>
+        <!-- Đặt hàng button -->
+        <button class="w-full py-2 bg-red-600 text-white rounded">
+            Đặt hàng
+        </button>
+    </div>
+
+
+    <div class="grid grid-cols-3 gap-4">
+        <!-- Bên trái -->
+        <div class="col-span-2 bg-white p-4 rounded shadow-sm">
+            <!-- Chọn hình thức giao hàng -->
+            <div class="htgh">
+                <h2 class="text-lg font-bold text-gray-700">
+                    Chọn hình thức giao hàng
+                </h2>
+                <div class="mt-2 p-4 border rounded">
+                    <div class="flex items-center space-x-2">
+                        <input checked="" id="giao-tiet-kiem" name="shipping-method" type="radio" />
+                        <label class="text-blue-600" for="giao-tiet-kiem">
+                            Giao tiết kiệm -30K
+                        </label>
+                    </div>
+                    <div class="mt-2 flex items-center space-x-2">
+                        <i class="fas fa-truck text-green-500">
+                        </i>
+                        <span class="text-sm text-gray-600">
+                            Giao thứ 5, trước 19h, 26/10
+                        </span>
+                    </div>
+                    <div class="mt-2 flex items-center justify-between">
+                        <div class="text-sm text-gray-600">
+                            <span class="font-bold">
+                                GIÁO TIẾT KIỆM
+                            </span>
+                            42.000 ₫
+                            <span class="line-through">
+                                12.000 ₫
+                            </span>
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            <span class="font-bold">
+                                Điện thoại Samsung Galaxy A54 5G (8GB/128GB) - Hàng...
+                            </span>
+                            8.480.000 ₫ x1
+                        </div>
+                    </div>
+                    <div class="mt-2 text-sm text-gray-600">
+                        <i class="fas fa-check-circle text-green-500">
+                        </i>
+                        Được giao bởi GIA DỤNG VIỆT
+                    </div>
+                    <div class="mt-2 text-sm text-blue-600">
+                        <a href="#">
+                            Shop khuyến mãi Nhập hoặc chọn mã
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="pay">
+                <h4>Chọn hình thức thanh toán</h4>
+                <p>
+                    <input type="radio" id="html" name="pay" checked>
+                    <img src="~/Content/images/money-bill-1-wave-solid.svg" alt="thanhtoan" />
+                    Thanh toán tiền mặt khi nhận hàng
+                </p>
+                <p>
+                    <input type="radio" id="html" name="pay" checked>
+                    <img src="~/Content/images/viettel.png" />
+                    Thanh toán bằng ví Viettel Money
+                </p>
+                <p>
+                    <input type="radio" id="html" name="pay" checked>
+                    <img src="~/Content/images/momo.png" alt="momo" />
+                    Thanh toán bằng ví Momo
+                </p>
+                <p>
+                    <input type="radio" id="html" name="pay" checked>
+                    <img src="~/Content/images/zalo.png" />
+                    Thanh toán bằng ví ZaloPay
+                </p>
+                <p>
+                    <input type="radio" id="html" name="pay" checked>
+                    <img src="~/Content/images/vnpay.png" />
+                    Thanh toán bằng VNPAY <br />
+                    Quét mã QR từ ứng dụng ngân hàng
+                </p>
+                <p>
+                    <input type="radio" id="html" name="pay" checked>
+                    <img src="~/Content/images/money-check-dollar-solid.svg" />
+                    Thanh toán bằng thẻ quốc tế Visa, Master,JCB
+                </p>
+                <button id="mt-2 px-4 py-2 bg-blue-600 text-white rounded">
+                    + Thêm thẻ mới
+                </button>
+                <section class="product-list">
+                    <h6>Ưu đãi thanh toán thẻ</h6>
+                    <div class="p-2 border rounded">
+                        <div class="flex items-center space-x-2">
+                            <img alt="Shinhan Bank logo" class="h-6" height="30" src="https://storage.googleapis.com/a1aa/image/wflWQXkclxRVcifBHtrNvPSCNdmOJaFs0zrJfn4Aqc7AG0InA.jpg" width="30" />
+                            <span class="text-sm text-gray-700">
+                                Freeshp
+                            </span>
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            Thẻ Shinhan Platinum
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            không giới hạn
+                        </div>
+                    </div>
+                    <div class="p-2 border rounded">
+                        <div class="flex items-center space-x-2">
+                            <img alt="Shinhan Bank logo" class="h-6" height="30" src="https://storage.googleapis.com/a1aa/image/wflWQXkclxRVcifBHtrNvPSCNdmOJaFs0zrJfn4Aqc7AG0InA.jpg" width="30" />
+                            <span class="text-sm text-gray-700">
+                                Giảm 50k
+                            </span>
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            Đơn từ 300k
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            không giới hạn
+                        </div>
+                    </div>
+                    <div class="p-2 border rounded">
+                        <div class="flex items-center space-x-2">
+                            <img alt="Shinhan Bank logo" class="h-6" height="30" src="https://storage.googleapis.com/a1aa/image/wflWQXkclxRVcifBHtrNvPSCNdmOJaFs0zrJfn4Aqc7AG0InA.jpg" width="30" />
+                            <span class="text-sm text-gray-700">
+                                Giảm 150k
+                            </span>
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            Đơn từ 1 triệu
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            không giới hạn
+                        </div>
+                    </div>
+                    <div class="p-2 border rounded">
+                        <div class="flex items-center space-x-2">
+                            <img alt="Shinhan Bank logo" class="h-6" height="30" src="https://storage.googleapis.com/a1aa/image/wflWQXkclxRVcifBHtrNvPSCNdmOJaFs0zrJfn4Aqc7AG0InA.jpg" width="30" />
+                            <span class="text-sm text-gray-700">
+                                Giảm 70k
+                            </span>
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            Đơn từ 500k
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            không giới hạn
+                        </div>
+                    </div>
+                    <div class="p-2 border rounded">
+                        <div class="flex items-center space-x-2">
+                            <img alt="Shinhan Bank logo" class="h-6" height="30" src="https://storage.googleapis.com/a1aa/image/wflWQXkclxRVcifBHtrNvPSCNdmOJaFs0zrJfn4Aqc7AG0InA.jpg" width="30" />
+                            <span class="text-sm text-gray-700">
+                                Giảm 100k
+                            </span>
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            Đơn từ 700k
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            không giới hạn
+                        </div>
+                    </div>
+                    <div class="p-2 border rounded">
+                        <div class="flex items-center space-x-2">
+                            <img alt="Shinhan Bank logo" class="h-6" height="30" src="https://storage.googleapis.com/a1aa/image/wflWQXkclxRVcifBHtrNvPSCNdmOJaFs0zrJfn4Aqc7AG0InA.jpg" width="30" />
+                            <span class="text-sm text-gray-700">
+                                Giảm 30k
+                            </span>
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            Đơn từ 200k
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            không giới hạn
+                        </div>
+                    </div>
+                    <div class="p-2 border rounded">
+                        <div class="flex items-center space-x-2">
+                            <img alt="Shinhan Bank logo" class="h-6" height="30" src="https://storage.googleapis.com/a1aa/image/wflWQXkclxRVcifBHtrNvPSCNdmOJaFs0zrJfn4Aqc7AG0InA.jpg" width="30" />
+                            <span class="text-sm text-gray-700">
+                                Giảm 50k
+                            </span>
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            Đơn từ 300k
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            không giới hạn
+                        </div>
+                    </div>
+                    <div class="p-2 border rounded">
+                        <div class="flex items-center space-x-2">
+                            <img alt="Shinhan Bank logo" class="h-6" height="30" src="https://storage.googleapis.com/a1aa/image/wflWQXkclxRVcifBHtrNvPSCNdmOJaFs0zrJfn4Aqc7AG0InA.jpg" width="30" />
+                            <span class="text-sm text-gray-700">
+                                Giảm 50k
+                            </span>
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            Đơn từ 200k
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            Sắp cháy hàng
+                        </div>
+                    </div>
+                    <div class="p-2 border rounded">
+                        <div class="flex items-center space-x-2">
+                            <img alt="MB Bank logo" class="h-6" height="30" src="https://storage.googleapis.com/a1aa/image/fsL6bWWRACwfGkmmUOzkNvTgcTT3cZAWSq2kIbIReWW9F0InA.jpg" width="30" />
+                            <span class="text-sm text-gray-700">
+                                Giảm 50k
+                            </span>
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            Đơn từ 500k
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            Sắp cháy hàng
+                        </div>
+                    </div>
+                    <div class="p-2 border rounded">
+                        <div class="flex items-center space-x-2">
+                            <img alt="Shinhan Bank logo" class="h-6" height="30" src="https://storage.googleapis.com/a1aa/image/wflWQXkclxRVcifBHtrNvPSCNdmOJaFs0zrJfn4Aqc7AG0InA.jpg" width="30" />
+                            <span class="text-sm text-gray-700">
+                                Freeshp
+                            </span>
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            Thẻ Shinhan Classic
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            không giới hạn
+                        </div>
+                    </div>
+                    <div class="p-2 border rounded">
+                        <div class="flex items-center space-x-2">
+                            <img alt="HSBC logo" class="h-6" height="30" src="https://storage.googleapis.com/a1aa/image/e9CqocxiGrRmESmwx3Sh1p6x6OCLdfZ7bJOlg2jX8dT8CakTA.jpg" width="30" />
+                            <span class="text-sm text-gray-700">
+                                Giảm 50k
+                            </span>
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            Đơn từ 300k
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            không giới hạn
+                        </div>
+                    </div>
+                </section>
+                <p>
+                    <input height="50px" type="radio" id="html" name="pay" checked>
+                    <img src="~/Content/images/atm.png" />
+                    Thẻ ATM nội địa/Internet Banking (Hỗ trợ Internet Banking)
+                </p>
+            </div>
+
+</body>
+</html>
+
+
+
